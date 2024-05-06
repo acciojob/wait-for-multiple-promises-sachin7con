@@ -33,9 +33,6 @@ output.appendChild(rowLoading);
 
 Promise.all(arr)
     .then((results) => {
-        // Remove loading message
-        output.removeChild(rowLoading);
-
         let totalTime = 0;
         results.forEach((result) => {
             const row = output.insertRow();
@@ -56,4 +53,8 @@ Promise.all(arr)
     })
     .catch((e) => {
         console.log("Error: ", e);
+    })
+    .finally(() => {
+        // Remove loading message
+        output.removeChild(rowLoading);
     });
