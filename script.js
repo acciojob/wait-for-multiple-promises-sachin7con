@@ -54,7 +54,4 @@ Promise.all(arr)
     .catch((e) => {
         console.log("Error: ", e);
     })
-    .finally(() => {
-        // Remove loading message
-        output.removeChild(rowLoading);
     });
