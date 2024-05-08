@@ -27,6 +27,7 @@ let output = document.getElementById('output');
 
 // Add loading message
 let rowLoading = document.createElement('tr');
+rowLoading.setAttribute('id', 'loading');
 let tdLoading = document.createElement('td');
 tdLoading.colSpan = 2;
 tdLoading.textContent = "Loading...";
